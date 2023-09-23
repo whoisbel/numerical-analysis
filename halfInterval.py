@@ -2,7 +2,7 @@ from math import *
 from tabulate import tabulate
 
 
-def main():
+def solve():
     print("""
         Enter your equation
         Operations:
@@ -43,7 +43,3 @@ def main():
             break
 
     print(tabulate(table, headers, tablefmt="pretty"))
-
-
-if __name__ == "__main__":
-    main()

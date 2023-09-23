@@ -2,7 +2,7 @@ from math import *
 from tabulate import tabulate
 
 
-def main():
+def solve():
     print("""
         Enter your equation
         Operations:
@@ -38,7 +38,3 @@ def main():
         print("Diverging")
     else:
         print(f"Converging")
-
-
-if __name__ == "__main__":
-    main()

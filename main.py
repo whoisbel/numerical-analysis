@@ -6,10 +6,20 @@ import newtonMethod
 def main():
 
     print("""
-    1. Root Finding                                         2. System of Linear Equations
-          a.) Method of Successive Substitution                 a.) Gaussian Elimination with Maximum Pivot Strategy (GEMPS)
-          b.) Newton's Method                                   b.) Gauss-Jordan Method
-          c.) Half-Interval Method
+            1. Root Finding                             
+              a.) Method of Successive Substitution
+              b.) Newton's Method
+              c.) Half-Interval Method
+
+            2. System of Linear Equations
+              a.) Gaussian Elimination with Maximum Pivot Strategy (GEMPS)
+              b.) Gauss-Jordan Method
+
+            3. Numerical Integration
+              a.) Trapezoidal Rule
+              b.) Simpson's Rule
+              c.) Romberg Integration
+          
     """)
 
 

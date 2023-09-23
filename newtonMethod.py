@@ -3,7 +3,7 @@ from tabulate import tabulate
 from math import *
 
 
-def main():
+def solve():
     print("""
         Enter your equation
         Operations:
@@ -36,7 +36,3 @@ def main():
         x0 = x1
 
     print(tabulate(table, headers, tablefmt="pretty"))
-
-
-if __name__ == "__main__":
-    main()
