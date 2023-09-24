@@ -1,0 +1,9 @@
+import gaussJordan
+import gemp
+import moss
+import halfInterval
+import newtonMethod
+import simpsons
+import romberg
+import trapezoidal
+import utils
