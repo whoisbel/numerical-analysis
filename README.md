@@ -10,7 +10,7 @@
 
 ## System of Linear Equations
 
-1. Gaussian Elimation with Maximum Pivot Strategy (GEMPS)
+1. Gaussian Elimination with Maximum Pivot Strategy (GEMPS)
 2. Gauss-Jordan method
 
 ## Numerical Integration

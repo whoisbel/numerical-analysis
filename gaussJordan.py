@@ -1,3 +1,27 @@
+
+def input_matrix():
+    matrix = []
+    print("Enter each row of the matrix, separated by spaces:")
+
+    while True:
+        row_input = input("Enter a row (or press Enter to finish): ")
+
+        if not row_input:
+            break
+
+        row = [float(x) for x in row_input.split()]
+        matrix.append(row)
+
+    return matrix
+
+
+def print_matrix(matrix):
+    for row in matrix:
+        for elem in row:
+            print("{:6.2f}".format(elem), end=" ")
+        print()
+
+
 def solve(A):
     n = len(A)
 
@@ -39,20 +63,14 @@ def solve(A):
     return solution
 
 
-def print_matrix(matrix):
-    for row in matrix:
-        for elem in row:
-            print("{:6.2f}".format(elem), end=" ")
-        print()
+def run():
+    A = input_matrix()
 
+    print("Matrix A:")
+    print_matrix(A)
 
-A = [[2, -7, 4, 9],
-     [1, 9, -6, 1],
-     [-3, 8, 5, 6]]
+    solution = solve(A)
 
-solution = solve(A)
-
-
-print("Final solution:")
-for i, x_i in enumerate(solution):
-    print(f"x{i + 1} = {x_i:.2f}")
+    print("\nFinal solution:")
+    for i, x_i in enumerate(solution):
+        print(f"x{i + 1} = {x_i:.2f}")

@@ -2,25 +2,13 @@ from math import *
 from tabulate import tabulate
 
 
-def solve():
-    print("""
-        Enter your equation
-        Operations:
-        + ADDITION
-        - SUBTRACTION
-        / DIVISION
-        * MULTIPLY
-        ** EXPONENT
-        sqrt() SQUARE ROOT
-        sin() SINE
-        cos() COSINE
-        tan() TANGENT\n\n""")
+def solve(eq, initial_x, numIterations):
 
-    equation = input("Enter equation: ")
-    x = float(input("Enter initial value of x: "))
-    k = int(input("Enter how many iterations: "))
+    equation = eq
+    x = float(initial_x)
+    k = int(numIterations)
     table = []
-    absolute_error_threshold = 0.0000009
+    absolute_error_threshold = 0.0009
     error = float('inf')
 
     for i in range(k):
@@ -32,9 +20,9 @@ def solve():
 
     headers = ["Iteration", "Xo", "Xo+1", "Relative Error"]
 
-    print(tabulate(table, headers, tablefmt="pretty"))
-
     if error > absolute_error_threshold:
         print("Diverging")
     else:
         print(f"Converging")
+
+    return (tabulate(table, headers, tablefmt="pretty"))

@@ -2,23 +2,9 @@ from math import *
 from tabulate import tabulate
 
 
-def solve():
-    print("""
-        Enter your equation
-        Operations:
-        + ADDITION
-        - SUBTRACTION
-        / DIVISION
-        * MULTIPLY
-        ** EXPONENT
-        sqrt() SQUARE ROOT
-        sin() SINE
-        cos() COSINE
-        tan() TANGENT\n\n""")
+def solve(eq, x0, x1):
 
-    equation = input("Enter f(x): ")
-    x0 = float(input("Enter value of Xo+: "))
-    x1 = float(input("Enter value of Xo-: "))
+    equation = eq
     table = []
     headers = ["Iteration", "Xo+",
                "Xo-", "Xo+1", "f(Xo+1)", "Relative Error"]
@@ -42,4 +28,4 @@ def solve():
                          f'{x:.4f}', f'{result:.4f}'])
             break
 
-    print(tabulate(table, headers, tablefmt="pretty"))
+    return tabulate(table, headers, tablefmt="pretty")
