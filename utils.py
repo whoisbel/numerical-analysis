@@ -81,5 +81,9 @@ def numerical_integration_menu():
         print(imports.simpsons.solve(eq, l, u, should_print=True))
     elif user_input == "3":
         print_equation()
+        eq = input("Enter equation: ")
+        l = input("Enter the value of lower limit: ")
+        u = input("Enter the value of upper limit: ")
+        print(imports.romberg.solve(eq, l, u))
     else:
         print("Invalid input. Please enter 1, 2, or 3.")

@@ -2,7 +2,7 @@ from tabulate import tabulate
 from math import *
 
 
-def solve(equation, upperLimit, lowerLimit="0", should_print=False):
+def solve(equation, lowerLimit, upperLimit, should_print=False):
     b = eval(upperLimit)
     a = eval(lowerLimit)
 
