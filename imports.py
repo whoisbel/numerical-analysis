@@ -7,3 +7,4 @@ import simpsons
 import romberg
 import trapezoidal
 import utils
+import os

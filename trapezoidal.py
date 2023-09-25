@@ -1,23 +1,27 @@
 from math import *
+from tabulate import tabulate
 
 
-def solve(equation, strips, lowerLimit, upperLimit):
-
-    n = strips
-    a = eval(lowerLimit)
+def solve(equation, lowerLimit, upperLimit, should_print=False):
     b = eval(upperLimit)
-    h = (b-a)/n
+    a = eval(lowerLimit)
     x = 0
-    for i in range(int((b - a) / h) + 1):
-        equation_display = ''
-        value = a + i * h
-        if (value == a or value == b):
-            x += eval(equation.replace("x", str(value)))
-            equation_display = f'{equation.replace("x", str(value))} = {eval(equation.replace("x", str(value))):.5f}'
-            print(equation_display)
-        else:
-            x += 2 * eval(equation.replace("x", str(value)))
-            equation_display = f'2 * ({equation.replace("x", str(value))}) = {2 * eval(equation.replace("x", str(value))):.5f}'
-            print(equation_display)
+    table = []
+    for n in [2**i for i in range(12)]:
+        h = (b - a) / n
+        x = 0
 
-    return (h/2) * x
+        for i in range(n + 1):
+            value = a + i * h
+            if value == a or value == b:
+                x += eval(equation.replace("x", str(value)))
+            else:
+                x += 2 * eval(equation.replace("x", str(value)))
+
+        result = (h / 2) * x
+        table.append([n, result])
+    if should_print:
+        print(tabulate(table, ["Panels", "Area"], tablefmt="simple"))
+        return ""
+    else:
+        return table

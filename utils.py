@@ -70,17 +70,15 @@ def numerical_integration_menu():
     if user_input == "1":
         print_equation()
         eq = input("Enter equation: ")
-        n = int(input("Enter number of strips: "))
         l = input("Enter the value of lower limit: ")
         u = input("Enter the value of upper limit: ")
-        print(imports.trapezoidal.solve(eq, n, l, u))
+        print(imports.trapezoidal.solve(eq, l, u, should_print=True))
     elif user_input == "2":
         print_equation()
         eq = input("Enter equation: ")
-        n = int(input("Enter number of strips: "))
         l = input("Enter the value of lower limit: ")
         u = input("Enter the value of upper limit: ")
-        print(imports.simpsons.solve(eq, n, l, u))
+        print(imports.simpsons.solve(eq, l, u, should_print=True))
     elif user_input == "3":
         print_equation()
     else:
