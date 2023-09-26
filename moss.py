@@ -4,6 +4,8 @@ from tabulate import tabulate
 
 def solve(eq, initial_x, numIterations):
 
+    if(not eq or not initial_x or not numIterations):
+        return "Include complete input"
     equation = eq
     x = float(initial_x)
     k = int(numIterations)

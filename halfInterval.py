@@ -4,6 +4,8 @@ from tabulate import tabulate
 
 def solve(eq, x0, x1):
 
+    if(not eq or not x0 or not x1):
+        return "Include complete input"
     equation = eq
     table = []
     headers = ["Iteration", "Xo+",

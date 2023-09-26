@@ -5,6 +5,8 @@ from math import *
 
 def solve(eq, initial_x, numIteration):
 
+    if(not eq or not initial_x or not numIteration):
+        return "Include complete input"
     x = symbols('x')
     equation = eq
     print(f"Derivative of {equation} is {diff(equation,x)}")

@@ -3,6 +3,8 @@ from tabulate import tabulate
 
 
 def solve(equation, lowerLimit, upperLimit, should_print=False):
+    if not equation or not lowerLimit or not upperLimit:
+        return "INCLUDE COMPLETE INPUT"
     b = eval(upperLimit)
     a = eval(lowerLimit)
     x = 0

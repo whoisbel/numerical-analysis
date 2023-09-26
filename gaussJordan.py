@@ -65,7 +65,8 @@ def solve(A):
 
 def run():
     A = input_matrix()
-
+    if not A:
+        return "Empty matrix"
     print("Matrix A:")
     print_matrix(A)
 

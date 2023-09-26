@@ -3,6 +3,9 @@ from math import *
 
 
 def solve(equation, lowerLimit, upperLimit, should_print=False):
+
+    if not equation or not lowerLimit or not upperLimit:
+        return "INCLUDE COMPLETE INPUT"
     b = eval(upperLimit)
     a = eval(lowerLimit)
 
